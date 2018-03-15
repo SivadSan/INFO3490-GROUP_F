@@ -1,0 +1,67 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Home</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <h3>Client data template</h3>
+
+  <!--<p>
+    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will show you the way.
+  </p>-->
+
+  <!--<button ion-button secondary menuToggle>Toggle Menu</button>-->
+ 
+  <!--(ngSubmit)="logForm()"-->
+
+        <ion-item>
+          <ion-label color="primary" stacked>First Name</ion-label>
+          <ion-input type="text" placeholder="First Name" [(ngModel)]="data.fname"></ion-input>
+        </ion-item>
+
+        <ion-item>
+          <ion-label color="primary" stacked>Last Name</ion-label>
+          <ion-input type="text" placeholder="Last Name" [(ngModel)]="data.lname"></ion-input>
+        </ion-item>
+
+        <ion-item>
+          <ion-label color="primary" stacked>Date of Birth</ion-label>
+          <ion-datetime displayFormat="MM/DD/YYYY" [(ngModel)]="data.DoB"></ion-datetime>
+        </ion-item>
+
+        <ion-item>
+          <ion-label color="primary" stacked>Sex</ion-label>
+          <ion-input type="text" placeholder="Sex" [(ngModel)]="data.sex"></ion-input>
+        </ion-item>
+        
+        <ion-item>
+          <ion-label color="primary" stacked>Height</ion-label>
+          <ion-input type="number" placeholder="Height" [(ngModel)]="data.height"></ion-input>
+        </ion-item>
+
+        <ion-item>
+          <ion-label color="primary" stacked>Weight</ion-label>
+          <ion-input type="number" placeholder="Weight" [(ngModel)]="data.weight"></ion-input>
+        </ion-item>
+
+        <ion-item>
+          <ion-label color="primary" stacked>Goal</ion-label>
+          <ion-input type="number" placeholder="Goal" [(ngModel)]="data.goal"></ion-input>
+        </ion-item>
+
+        <ion-item>
+          <ion-label color="primary" stacked>Activity Level</ion-label>
+          <ion-input type="number" placeholder="Activity Level" [(ngModel)]="data.activity"></ion-input>
+        </ion-item>
+        
+        <button ion-button type="submit" (click)="add(data)" >Submit</button>
+    
+
+        <button ion-button (click)="logout()"*ngIf="!google.loggin" type="submit">Logout</button>
+  
+
+</ion-content>
