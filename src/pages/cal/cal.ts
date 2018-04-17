@@ -15,22 +15,31 @@ import { HomePage } from '../home/home';
 export class CalPage {
 
 DataRef$:Observable<Data[]>
-
+ref: any;
     constructor(public navCtrl: NavController, private service:Service){
-        this.DataRef$=this.service.getServiceList()
+        this.service.getServiceList()
         .snapshotChanges()
-        .map(changes =>{
-            return changes.map(c=>({
-                key:c.payload.key,
-                ...c.payload.val(),
-            })); 
+        .subscribe((changes) =>{
+           // console.log(changes.payload.val());
+            this.ref=changes.payload.val();
+            // return changes.map(c=>({
+                //console.log(this.ref);
+                let newref = changes.payload.forEach((child) => {
+                    //console.log(child.val());
+                    let ref=child.val();
+                    console.log(ref.weight)
+                    var x=Number(ref.weight)+2;
+                    console.log(x);
+                    return true;
+                })
+            //     key:c.payload.key,
+            //     ...c.payload.val(),
+
+            // })); 
         });
     }
 
-cal1(data:Data){
-   
 
-}
 
 
 back(){
