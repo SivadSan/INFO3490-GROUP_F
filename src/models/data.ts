@@ -6,5 +6,5 @@ export interface Data{
     height:number;
     weight:number;
     goal:number;
-    acivity:number;
+    activity:number;
 }

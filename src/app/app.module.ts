@@ -16,8 +16,9 @@ import { AngularFireModule } from "angularfire2";
 import {AngularFireAuthModule} from "angularfire2/auth";
 import { FIREBASE_CONFIG } from "./app.firebase.config";
 import {AngularFireDatabaseModule} from "angularfire2/database";
-import {AngularFireList} from "angularfire2/database";
 
+import { Observable } from 'rxjs/Observable';
+import {Service} from '../pages/service'
 //import firebase from 'firebase';
 
 @NgModule({
@@ -48,7 +49,8 @@ import {AngularFireList} from "angularfire2/database";
   providers: [
     StatusBar,
     SplashScreen,
-    {provide: ErrorHandler, useClass: IonicErrorHandler}
+    {provide: ErrorHandler, useClass: IonicErrorHandler},
+    Service
   ]
 })
 export class AppModule {}
