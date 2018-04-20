@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
 import { User } from "../../models/user";
 import {AngularFireAuth} from "angularfire2/auth";
+import { HomePage } from '../home/home';
 /**
  * Generated class for the RegisterPage page.
  *
@@ -29,6 +30,7 @@ export class RegisterPage {
   async register(user:User){
     const result =this.auth.auth.createUserWithEmailAndPassword(this.user.email, this.user.password);
     console.log(result);
+      this.navCtrl.setRoot(HomePage);
   }
   catch(e){
     console.error(e);

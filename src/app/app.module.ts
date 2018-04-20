@@ -7,8 +7,8 @@ import { HomePage } from '../pages/home/home';
 import { ListPage } from '../pages/list/list';
 import { LoginPage } from '../pages/login/login';
 import { RegisterPage } from '../pages/register/register';
-import { CalPage } from '../pages/cal/cal';
-
+//import { CalPage } from '../pages/cal/cal';
+import { CalculationPage } from '../pages/calculations/calculations';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 
@@ -28,7 +28,8 @@ import {Service} from '../pages/service'
     ListPage,
     LoginPage,
     RegisterPage,
-    CalPage
+    //CalPage,
+    CalculationPage
   ],
   imports: [
     BrowserModule,
@@ -44,7 +45,8 @@ import {Service} from '../pages/service'
     ListPage,
     LoginPage,
     RegisterPage,
-    CalPage
+    //CalPage,
+    CalculationPage
   ],
   providers: [
     StatusBar,

@@ -1,0 +1,30 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Calculations</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <ion-list>
+        <ion-item *ngFor="let bmr of BMR">
+            <h3>Base Metabolic Rate:{{bmr}}</h3>
+        </ion-item>
+          <ion-item *ngFor="let dmc of DMC">
+            <h3>Daily Maintance Calories:{{dmc}}</h3>
+        </ion-item>
+         <ion-item *ngFor="let dpi of DPI">
+            <h3>Daily Protein Intake:{{dpi}}</h3>
+        </ion-item>
+         <ion-item *ngFor="let dfi of DFI">
+            <h3>Daily Fat Intake:{{dfi}}</h3>
+        </ion-item>
+         <ion-item *ngFor="let dci of DCI">
+            <h3>Daily Carbohydrate Intake:{{dci}}</h3>
+        </ion-item>
+  </ion-list>
+
+  <button ion-button (click)="back()" type="submit">Back</button>
+</ion-content>

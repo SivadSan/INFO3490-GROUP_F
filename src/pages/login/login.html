@@ -17,12 +17,17 @@
         <ion-label>Password</ion-label>
         <ion-input type="password" [(ngModel)]="user.password"></ion-input>
         </ion-item>
-
+        <ion-item>
         <button ion-button (click)="login(user)">Login</button>
+        </ion-item>
+
+        <ion-item>
         <button ion-button (click)="register()">Register</button>
+       </ion-item>
 
+        <ion-item>
         <button ion-button (click)="loginwithGoogle()" *ngIf="!google.loggin">Login with google</button>
-
+        </ion-item>
 
 
 </ion-content>

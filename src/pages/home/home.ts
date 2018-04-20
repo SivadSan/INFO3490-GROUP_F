@@ -3,9 +3,8 @@ import { NavController } from 'ionic-angular';
 import { AngularFireAuth } from "angularfire2/auth";
 import {AngularFireDatabase, AngularFireList } from "angularfire2/database";
 //import {AngularFireDatabase} from "angularfire2/database";
-import { FirebaseListObservable} from "angularfire2/database-deprecated";
 import { LoginPage } from '../login/login';
-import { CalPage } from '../cal/cal';
+//import { CalPage } from '../cal/cal';
 import { Data } from "../../models/data";
 import { Observable } from 'rxjs/Observable';
 @Component({
@@ -46,12 +45,15 @@ google={
     this.dRef$.push({
       name:this.data.fname,
       lname:this.data.lname,
-      DoB:this.data.DoB,
+      age:this.data.age,
       sex:this.data.sex,
       height:this.data.height,
       weight:this.data.weight,
       goal:this.data.goal,
-      activity:this.data.activity
+      activity:this.data.activity,
+      am:this.data.am,
+      fat:this.data.fat,
+      tdee:this.data.tdee,
       });
   }
   // submit(){
